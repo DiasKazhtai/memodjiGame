@@ -25,10 +25,12 @@ module.exports = {
       },
     module: {
         rules: [
+          
           {
             test: /\.css$/i,
             use: [MiniCssExtractPlugin.loader, 'css-loader'],
           },
+          
           {
             test: /\.m?js$/,
             exclude: /(node_modules|bower_components)/,
@@ -47,6 +49,13 @@ module.exports = {
               'css-loader',
               'sass-loader',
             ],
+          },
+          {
+            test: /\.(png|jpg|gif|svg)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            }
           },
         ],
       },
