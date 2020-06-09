@@ -4,6 +4,7 @@ const gridWrapper = document.querySelector('.grid-wrapper')
 const animalItem = document.querySelector('.animal-item')
 const animaClassForTarget = document.querySelectorAll('.grid-item') 
 
+const store = []
 const animals = ['cat', 'dog', 'frog', 'monkey', 'pig', 'snake',
                  'cat', 'dog', 'frog', 'monkey', 'pig', 'snake']
 
