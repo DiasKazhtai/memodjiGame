@@ -3,6 +3,7 @@ import './scss/index.scss'
 const gridWrapper = document.querySelector('.grid-wrapper')
 const animalItem = document.querySelector('.animal-item')
 const animaClassForTarget = document.querySelectorAll('.grid-item') 
+const timer = document.querySelector('.timer')
 
 const store = {
     cards: [],
