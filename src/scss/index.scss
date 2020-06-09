@@ -18,14 +18,13 @@ body {
                 height: 140px;
                 border-radius: 6px;
                 background-color: #009991;
-                border: 2px solid #0058b0   ;
+                border: 2px solid #0058b0 ;
                 cursor: pointer;
             }
-            .active {
+             .active {
                 animation: cardSwip .2s ease-in-out forwards;
-                background-color: white;
-                background-image: url('../img/pig.jpg');
-                background-size: contain;
+                background-size: 100%;
+                background-color: #fff;
                 background-repeat: no-repeat;
             }
             .closed {
@@ -34,15 +33,47 @@ body {
             @keyframes cardBackSwip {
                 100% {
                     transform: rotateY(180deg);
-                    
+                   
                 }
             }
             @keyframes cardSwip {
                 100% {
                     transform: rotateY(180deg);
-                    
                 }
             }
         }
     }
 }
+
+.cat {
+    background: url('../img/cat.png');
+}
+
+.dog {
+    background: url('../img/dog.jpg');
+    
+}
+
+
+.frog {
+    background: url('../img/frog.png');
+}
+
+
+.monkey {
+    background: url('../img/monkey.jpg');
+}
+
+.pig {
+    background: url('../img/pig.png');
+}
+
+
+.snake {
+    background: url('../img/snake.jpg');
+}
+
+
+
+
+
