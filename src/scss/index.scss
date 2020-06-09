@@ -1,1 +1,79 @@
-@import './reset.scss'
+@import './reset.scss';
+
+
+body {
+    background-color:#a2fca5;
+    .container{
+        width: 1200px;
+        max-width: 1200px;
+        .grid-wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows:  repeat(3, 100px);
+            grid-gap: 70px;
+            margin-left: 300px;
+            margin-top: 50px;
+            .grid-item{
+                width: 120px;
+                height: 140px;
+                border-radius: 6px;
+                background-color: #009991;
+                border: 2px solid #0058b0 ;
+                cursor: pointer;
+            }
+             .active {
+                animation: cardSwip .2s ease-in-out forwards;
+                background-size: 100%;
+                background-color: #fff;
+                background-repeat: no-repeat;
+            }
+            .closed {
+                animation: cardBackSwip .2s ease-in-out forwards;
+            }
+            @keyframes cardBackSwip {
+                100% {
+                    transform: rotateY(180deg);
+                   
+                }
+            }
+            @keyframes cardSwip {
+                100% {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
+
+.cat {
+    background: url('../img/cat.png');
+}
+
+.dog {
+    background: url('../img/dog.jpg');
+    
+}
+
+
+.frog {
+    background: url('../img/frog.png');
+}
+
+
+.monkey {
+    background: url('../img/monkey.jpg');
+}
+
+.pig {
+    background: url('../img/pig.png');
+}
+
+
+.snake {
+    background: url('../img/snake.jpg');
+}
+
+
+
+
+
