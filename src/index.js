@@ -3,6 +3,7 @@ import './scss/index.scss'
 const gridWrapper = document.querySelector('.grid-wrapper')
 const animalItem = document.querySelector('.animal-item')
 const animaClassForTarget = document.querySelectorAll('.grid-item') 
+const timer = document.querySelector('.timer')
 
 const store = {
     cards: [],
@@ -12,6 +13,7 @@ const store = {
 const animals = ['cat', 'dog', 'frog', 'monkey', 'pig', 'snake',
                  'cat', 'dog', 'frog', 'monkey', 'pig', 'snake']
 
+const win =[]
 function clean (){
    return store.cards.forEach((elem)=>{
         store.cards = []
@@ -22,9 +24,31 @@ function shuffleAnimals (){
    return  animals.sort(() => Math.random() - 0.5)
 }
 
-
+let time = 15
 const shuffledAnimals = shuffleAnimals ()
-
+const countdown = () => {
+    if(win.length > 11){
+        alert('win')
+        clearInterval(interval)
+    }
+    timer.innerHTML = time -= 1
+    if(time === 0){
+        clearInterval(interval)
+        if(true){
+            animaClassForTarget.forEach((elem, index)=> {
+                if(elem.classList.contains('active')){
+                    win.push(elem)
+                }
+            })
+        }
+        if(win.length < 12){
+            alert('lose')
+        }else {
+            alert('win')
+        }
+    }
+}
+const interval = setInterval(countdown, 1000);
 
 animaClassForTarget.forEach((elem, index) => {
     elem.setAttribute('data-id', index)
